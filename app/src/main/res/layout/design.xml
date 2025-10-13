@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/suma"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:onClick="suma"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/tres"
+        app:layout_constraintTop_toTopOf="@+id/tres"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/resta"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="resta"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/seis"
+        app:layout_constraintTop_toBottomOf="@+id/suma"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/multiplicacion"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="multiplicacion"
+        android:text="*"
+        app:layout_constraintStart_toEndOf="@+id/nueve"
+        app:layout_constraintTop_toBottomOf="@+id/resta"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/division"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:onClick="division"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="@+id/multiplicacion"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicacion"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cero"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/ocho"
+        app:layout_constraintTop_toBottomOf="@+id/ocho"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/igual"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:onClick="calcular"
+        android:text="="
+        app:layout_constraintStart_toStartOf="@+id/division"
+        app:layout_constraintTop_toBottomOf="@+id/division"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/uno"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="176dp"
+        android:onClick="numeroClick"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:onClick="numeroClick"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/uno"
+        app:layout_constraintTop_toTopOf="@+id/uno"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/tres"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:onClick="numeroClick"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/dos"
+        app:layout_constraintTop_toTopOf="@+id/dos"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cuatro"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:onClick="numeroClick"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="@+id/uno"
+        app:layout_constraintTop_toBottomOf="@+id/uno"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cinco"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="numeroClick"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/cuatro"
+        app:layout_constraintTop_toBottomOf="@+id/dos"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/seis"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="numeroClick"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/cinco"
+        app:layout_constraintTop_toBottomOf="@+id/tres"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/siete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:onClick="numeroClick"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="@+id/cuatro"
+        app:layout_constraintTop_toBottomOf="@+id/cuatro"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/ocho"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="numeroClick"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@+id/siete"
+        app:layout_constraintTop_toBottomOf="@+id/cinco"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/nueve"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="numeroClick"
+        android:text="9"
+        app:layout_constraintStart_toEndOf="@+id/ocho"
+        app:layout_constraintTop_toBottomOf="@+id/seis"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="Clear"
+        android:text="AC"
+        app:layout_constraintBottom_toTopOf="@+id/suma"
+        app:layout_constraintStart_toStartOf="@+id/suma" />
+</androidx.constraintlayout.widget.ConstraintLayout>
