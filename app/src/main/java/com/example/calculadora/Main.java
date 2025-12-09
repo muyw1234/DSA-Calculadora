@@ -25,27 +25,30 @@ public class Main extends AppCompatActivity {
 
 
     public void calcular(View view) {
-        segundonumero = Integer.parseInt(Result.getText().toString());
-        if (segundonumero !=0.0 && primernumero != 0 && operacion != null) {
+        if (operacion != null) {
+            segundonumero = Double.parseDouble(Result.getText().toString());
+
             switch (operacion) {
                 case "+":
-                    resultado= primernumero + segundonumero;
-                    Result.setText(String.valueOf(resultado));
+                    resultado = primernumero + segundonumero;
                     break;
                 case "-":
-                    resultado= primernumero - segundonumero;
-                    Result.setText(String.valueOf(resultado));
+                    resultado = primernumero - segundonumero;
                     break;
                 case "*":
-                    resultado= primernumero * segundonumero;
-                    Result.setText(String.valueOf(resultado));
+                    resultado = primernumero * segundonumero;
                     break;
                 case "/":
-                    resultado= primernumero / segundonumero;
+                    if (segundonumero == 0) {
+                        Result.setText("Error");
+                        return;
+                    }
+                    resultado = primernumero / segundonumero;
                     break;
             }
+
             Result.setText(String.valueOf(resultado));
-            primernumero = 0; // Limpiar para nueva operación
+            primernumero = 0;
             operacion = null;
         }
     }
@@ -82,6 +85,24 @@ public class Main extends AppCompatActivity {
         primernumero = Integer.parseInt(Result.getText().toString());
         Result.setText("");
         operacion = boton.getText().toString();
+    }
+
+    public void sin(View view) {
+        double numero = Double.parseDouble(Result.getText().toString());
+        double resultado = Math.sin(Math.toRadians(numero)); // Convierte a radianes
+        Result.setText(String.valueOf(resultado));
+    }
+
+    public void cos(View view) {
+        double numero = Double.parseDouble(Result.getText().toString());
+        double resultado = Math.cos(Math.toRadians(numero)); // Convierte a radianes
+        Result.setText(String.valueOf(resultado));
+    }
+
+    public void tan(View view) {
+        double numero = Double.parseDouble(Result.getText().toString());
+        double resultado = Math.tan(Math.toRadians(numero)); // Convierte a radianes
+        Result.setText(String.valueOf(resultado));
     }
 
     public void Clear(View view) {
